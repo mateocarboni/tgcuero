@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>TGC Contacto</title>
+</head>
+<body>
+    <header>
+        <h1>
+            TGC Cuero crudo
+        </h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html" class="navegador">Inicio</a></li>
+                <li><a href="productos.html" class="navegador">Productos</a></li>
+                <li><a href="encargos.html" class="navegador">Encargo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>
+            Deje sus datos para realizar un encargo
+        </h2>
+        <form>
+            <fieldset>
+                <legend>DATOS</legend>
+                <div>
+                    <label for="nombre_apellido">Nombre y apellido: </label>
+                    <input type="text" name="nombre_apellido">
+                </div>
+                <hr>
+                <div>
+                    <label for="tipo">Tipo de encargo</label>
+                    <select name="tipo">
+                        <option value="soga">Soga</option>
+                        <option value="cuero">Cuero</option>
+                        <option value="Recado">Recado</option>
+                    </select>
+                </div>
+                <hr>
+                <div>
+                    <label for="aceptar">Aceptar terminos y condiciones</label>
+                    <input type="checkbox" name="aceptar" value="1">
+                </div>
+                <hr>
+                <div>
+                    <label for="especificaciones">Especificaciones</label>
+                    <textarea name="especificaciones" id="" cols="30" rows="10"></textarea>
+                </div>
+                <hr>
+                <input type="reset" name="Reiniciar">
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <h6>
+            Pagina web diseñada por Mateo Carboni.
+        </h6>
+    </footer>
+</body>
+</html>

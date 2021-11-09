@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin color ($color) {
+    color: $color;
+    
+}
+%centrar{
+    text-align: center;
+}
+
+body{
+    background-image: url(../multim/fondoc.jpg);
+    background-size: cover;
+    .titulo {
+        background-image: url(../multim/cuero.jpg) ;
+        border: solid 3px black;
+        .titulo__h1{ 
+            @include color(black);
+            font-size: 40px;
+            font-family: 'Oswald', sans-serif;
+            @extend %centrar;
+        }
+        nav{
+            .menu{
+                list-style-type: none;
+                margin: 10px auto;
+                background-color: beige;
+                max-width: 450px;
+                border-radius: 20px;
+                text-align: center;
+                font-size: 32px;
+                color: black;
+                .menu__li{
+                    display: inline-block;
+                    text-align: center;
+                    .menu__li--nav{
+                        text-decoration: none;
+                        @include color(black);
+                        padding: 3px;
+                        border-radius: 20px;
+                        &:hover{
+                            background-color: grey;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+    .intro {
+        height: 600px;
+        text-align: center;
+        padding: 250px 25px 250px 25px;
+        .intro__quienSoy {
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+            background-color: beige;
+            width: 220px;
+            margin-left: 620px;
+            border-radius: 20px;
+            border: solid 2px black;
+            transition: all 1s ease;
+            &:hover {
+                transform: scale(1.1,1.1);
+                background-color: brown
+            }
+        }
+    }
+    .info {
+        background: rgb(172,64,64);
+        background: linear-gradient(180deg, rgba(172,64,64,1) 0%, rgba(121,74,9,1) 100%, rgba(0,0,0,1) 100%);
+        height: 500px;
+        margin-top: 350px;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .info__desc{
+            .info__desc--h3{
+                @include color(darkred);
+                font-weight: bold ;
+                line-height: 1.2;
+                text-align: right;
+                width: 700px;
+                margin: 10px;
+                font-size: 22px;
+            }
+        }
+        .info__present{
+            display: flex;
+            flex: direction row;
+            .info__present--ul{
+                @include color(darkred);
+                font-weight: bold;
+                margin: 30px;
+                list-style: circle;
+                list-style-position: inside;
+                width: 320px;
+            }
+            .info__fotoPerfil {
+                width: 200px;
+                height: 200px;
+                margin: 10px;
+            }
+        }
+    }
+    .footer{
+        background-color: black;
+        @include color(white);
+        text-align: center;
+        padding: 10px;
+    }
+}
